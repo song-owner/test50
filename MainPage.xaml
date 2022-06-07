@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="problemSolver.MainPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Test"
+                     Command="{Binding TBCommand}"/>
+        <!-- ここでバインド -->
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout HeightRequest="0"/>
+            <StackLayout Orientation="Horizontal">
+                <Entry
+                            Margin="10,0,0,0"
+                            x:Name="seartchWord"
+                            HeightRequest="40"
+                            HorizontalOptions="FillAndExpand"
+                        />
+                <Button Text="🔍" Background="gray" Margin="0,0,10,0" Clicked="startSearch"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
